@@ -4,7 +4,7 @@ import 'package:pizza_purchase_app/widgets/Pizza_type.dart';
 import 'package:pizza_purchase_app/widgets/pizzaCard.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+  HomePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,8 +14,9 @@ class HomePage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              SizedBox(height: 30),
               Padding(
-                padding: const EdgeInsets.fromLTRB(35, 0, 35, 0),
+                padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: const [
@@ -29,22 +30,41 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 30),
-              Padding(
-                padding: const EdgeInsets.fromLTRB(35, 0, 35, 0),
+              SingleChildScrollView(
+                reverse: false,
+                scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
-                    PizzaType(pizzaType: "hi"),
-                    PizzaType(pizzaType: "hi"),
-                    PizzaType(pizzaType: "hi"),
-                    PizzaType(pizzaType: "hi"),
-                    PizzaType(pizzaType: "hi"),
-                    PizzaType(pizzaType: "hi"),
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
+                      child: (PizzaType(pizzaType: "hi")),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
+                      child: PizzaType(pizzaType: "hi"),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
+                      child: PizzaType(pizzaType: "hi"),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
+                      child: PizzaType(pizzaType: "hi"),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
+                      child: PizzaType(pizzaType: "hi"),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
+                      child: PizzaType(pizzaType: "hi"),
+                    ),
                   ],
                 ),
               ),
               const SizedBox(height: 10),
               Padding(
-                padding: const EdgeInsets.fromLTRB(35, 0, 35, 0),
+                padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
                 child: Text(
                   "Delicious food for you",
                   style: GoogleFonts.lato(
@@ -64,25 +84,25 @@ class HomePage extends StatelessWidget {
                       return Column(
                         children: [
                           PizzaCard(
-                            "assets/pizza1.jpg",
-                            "\$ 10.00",
-                            "250 kcal",
-                            "Pepperoni",
-                            "4.80",
+                            image: "assets/pizza1.jpg",
+                            price: "\$ 10.00",
+                            calorie: "250 kcal",
+                            type: "Pepperoni",
+                            rating: "4.80",
                           ),
                           PizzaCard(
-                            "assets/pizza2.jpg",
-                            "\$ 10.00",
-                            "250 kcal",
-                            "Pepperoni",
-                            "4.80",
+                            image: "assets/pizza2.jpg",
+                            price: "\$ 20.00",
+                            calorie: "250 kcal",
+                            type: "Sausages",
+                            rating: "4.00",
                           ),
                           PizzaCard(
-                            "assets/pizza3.jpg",
-                            "\$ 10.00",
-                            "250 kcal",
-                            "Pepperoni",
-                            "4.80",
+                            image: "assets/pizza3.jpg",
+                            price: "\$ 15.00",
+                            calorie: "300 kcal",
+                            type: "Beef",
+                            rating: "4.50",
                           ),
                         ],
                       );

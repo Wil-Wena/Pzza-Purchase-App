@@ -1,12 +1,19 @@
 //import 'dart:html';
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:pizza_purchase_app/widgets/pizzaCard.dart';
 
 class AddPizza extends StatefulWidget {
-  final String img;
-  const AddPizza({Key? key, required this.img}) : super(key: key);
+  final String img, pizzaName;
+  final String pizzaPrice;
+  AddPizza({
+    Key? key,
+    required this.img,
+    required this.pizzaName,
+    required this.pizzaPrice,
+  }) : super(key: key);
 
   @override
   State<AddPizza> createState() => _AddPizzaState();
@@ -63,12 +70,12 @@ class _AddPizzaState extends State<AddPizza> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        "Pizza",
+                        widget.pizzaName,
                         style: GoogleFonts.poppins(
                             fontWeight: FontWeight.bold, fontSize: 17),
                       ),
                       Text(
-                        "\$ 10.50",
+                        widget.pizzaPrice,
                         style: GoogleFonts.lato(
                             fontWeight: FontWeight.bold,
                             fontSize: 15,
@@ -135,22 +142,22 @@ class _AddPizzaState extends State<AddPizza> {
                           GoogleFonts.poppins(fontSize: 14, color: Colors.grey),
                     ),
                     SizedBox(height: 20),
-                    TextField(
-                      decoration: InputDecoration(
-                          prefixIcon: Icon(Icons.navigation_rounded),
-                          label: Text("Location"),
-                          border: OutlineInputBorder()),
-                    ),
-                    // Row(
-                    //   children: [
-                    //     Icon(Icons.navigation_rounded),
-                    //     SizedBox(width: 10),
-                    //     Text(
-                    //       "Enter Location",
-                    //       style: GoogleFonts.lato(fontWeight: FontWeight.w500),
-                    //     )
-                    //   ],
+                    // TextField(
+                    //   decoration: InputDecoration(
+                    //       prefixIcon: Icon(Icons.navigation_rounded),
+                    //       label: Text("Location"),
+                    //       border: OutlineInputBorder()),
                     // ),
+                    Row(
+                      children: [
+                        Icon(Icons.navigation_rounded),
+                        SizedBox(width: 10),
+                        Text(
+                          "Enter Location",
+                          style: GoogleFonts.lato(fontWeight: FontWeight.w500),
+                        )
+                      ],
+                    ),
 
                     SizedBox(height: 25),
                   ],
@@ -182,7 +189,7 @@ class _AddPizzaState extends State<AddPizza> {
                         style: GoogleFonts.lato(
                             fontWeight: FontWeight.w400, color: Colors.white)),
                     Text(
-                      "\$34.00",
+                      widget.pizzaPrice,
                       style: GoogleFonts.lato(
                           fontWeight: FontWeight.w400, color: Colors.white),
                     ),

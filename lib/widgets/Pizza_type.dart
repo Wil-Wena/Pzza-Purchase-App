@@ -16,29 +16,25 @@ class PizzaType extends StatefulWidget {
 class _PizzaTypeState extends State<PizzaType> {
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Ink(
-          child: InkWell(
-            onTap: () {},
-            child: Container(
-              width: 70,
-              height: 25,
-              decoration: BoxDecoration(
-                  border: Border.all(color: Colors.grey),
-                  borderRadius: BorderRadius.circular(50)),
-              child: Center(
-                  child: Text(
-                widget.pizzaType,
-                style: GoogleFonts.lato(color: Colors.grey),
-              )),
-            ),
+    return SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
+      child: Ink(
+        child: InkWell(
+          onTap: () {},
+          child: Container(
+            width: 70,
+            height: 25,
+            decoration: BoxDecoration(
+                border: Border.all(color: Colors.grey),
+                borderRadius: BorderRadius.circular(50)),
+            child: Center(
+                child: Text(
+              widget.pizzaType,
+              style: GoogleFonts.lato(color: Colors.grey),
+            )),
           ),
         ),
-        SizedBox(
-          width: 10,
-        ),
-      ],
+      ),
     );
   }
 }
