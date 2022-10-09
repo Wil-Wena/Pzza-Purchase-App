@@ -8,7 +8,7 @@ import 'package:pizza_purchase_app/widgets/pizzaCard.dart';
 class AddPizza extends StatefulWidget {
   final String img, pizzaName;
   final String pizzaPrice;
-  AddPizza({
+  const AddPizza({
     Key? key,
     required this.img,
     required this.pizzaName,
@@ -42,7 +42,7 @@ class _AddPizzaState extends State<AddPizza> {
                       bottom: 25,
                       right: 30,
                       child: Container(
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                             shape: BoxShape.circle, color: Colors.white),
                         child: IconButton(
                           icon: Icon(
@@ -61,7 +61,7 @@ class _AddPizzaState extends State<AddPizza> {
                 ],
               )),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             Padding(
               padding: const EdgeInsets.fromLTRB(30, 10, 30, 0),
               child: Stack(
@@ -89,7 +89,7 @@ class _AddPizzaState extends State<AddPizza> {
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
                         GestureDetector(
-                          child: Icon(
+                          child: const Icon(
                             Icons.add_circle_outline_outlined,
                             color: Colors.grey,
                           ),
@@ -112,7 +112,7 @@ class _AddPizzaState extends State<AddPizza> {
                               m++;
                             });
                           },
-                          child: Icon(Icons.add_circle_outline_outlined,
+                          child: const Icon(Icons.add_circle_outline_outlined,
                               color: Colors.grey),
                         )
                       ],
@@ -121,7 +121,7 @@ class _AddPizzaState extends State<AddPizza> {
                 ],
               ),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             Padding(
                 padding: const EdgeInsets.fromLTRB(30, 10, 30, 0),
                 child: Column(
@@ -141,7 +141,7 @@ class _AddPizzaState extends State<AddPizza> {
                       style:
                           GoogleFonts.poppins(fontSize: 14, color: Colors.grey),
                     ),
-                    SizedBox(height: 20),
+                    const SizedBox(height: 20),
                     // TextField(
                     //   decoration: InputDecoration(
                     //       prefixIcon: Icon(Icons.navigation_rounded),
@@ -165,7 +165,7 @@ class _AddPizzaState extends State<AddPizza> {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 65),
               child: Row(
-                children: [
+                children: const [
                   Icon(Icons.electric_bike),
                   SizedBox(width: 5),
                   Text("Free"),

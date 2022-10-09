@@ -21,10 +21,9 @@ class PizzaCard extends StatelessWidget {
   final String calorie;
   final String type;
   final String rating;
-  var s, height, width;
+
   @override
   Widget build(BuildContext context) {
-    //s = MediaQuery.of(context).size;
     return Scaffold(
       body: Column(
         children: [
